@@ -17,7 +17,7 @@ class UserBackground(models.Model):
     company_name = models.CharField(
         'Company Name', blank=False, null=False, max_length=100
     )
-    company_logo = CloudinaryField(
+    company_logo = models.ImageField(
         'Company Logo', blank=False, null=False, max_length=140
     )
     role = models.CharField(
