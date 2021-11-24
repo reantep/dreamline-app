@@ -1,5 +1,5 @@
 from django.db import models
-
+from cloudinary.models import CloudinaryField
 
 class BackgroundImg(models.Model):
     class Meta(object):
@@ -8,7 +8,7 @@ class BackgroundImg(models.Model):
     name = models.CharField(
         'Name', blank=False, null=False, max_length=14, db_index=True, default='Anonymous'
     )
-    image = models.ImageField(
+    image = CloudinaryField(
         'image'
     )
 
