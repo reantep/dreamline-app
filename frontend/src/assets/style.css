@@ -578,7 +578,7 @@ main yourbackground
 }
 
 .card .link-panel {
-  text-align: center;
+  text-align: start;
   margin-top: 5px;
   margin-bottom: 25px;
   margin: 25px 10%;
