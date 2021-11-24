@@ -104,7 +104,7 @@ class UserBackgroundAdd(CustomLoginRequiredMixin, generics.CreateAPIView):
 
         # Open Image Background
         generated_background_image = Image.open(
-            MEDIA_URL+str(background.image))
+            str(background.image))
 
         # Get Resize Width & Height
         width_resize, baseheight = resize_image(
@@ -146,7 +146,7 @@ class UserBackgroundAdd(CustomLoginRequiredMixin, generics.CreateAPIView):
         )
 
         # Save Image
-        generated_background_image.save(MEDIA_URL+filename, quality=100)
+        generated_background_image.save(filename, quality=100)
 
         # Convert Model to Serializer
         serializer = UserBackgroundSerializer(new_user_background)
